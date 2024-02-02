@@ -157,6 +157,14 @@ header {
     margin: 15px 0 20px 0;
 }
 
+.text{
+    margin-top: 10px;
+    padding: 30px 80px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
 
 /* =============== Hero ================*/
 .products{
@@ -167,6 +175,7 @@ header {
 
 #product1{
     text-align: center;
+    padding-left:200px;
 }
 
 #product1 .product-container{
@@ -194,6 +203,7 @@ header {
 }
 
 #product1 .pro img{
+    margin: 15px;
     width:80%;
     border-radius: 20px;
 }
@@ -367,7 +377,7 @@ footer{
     }
     .navbar-menu{
         position: fixed;
-        width: 100%;
+        width: 80%;
         height: 80vh;
         background: #adadad;
         right: -100%;
@@ -385,7 +395,6 @@ footer{
 
     .navbar-menu a:hover {
         color: cadetblue;
-        border: 1px solid green;
         margin: 0;
     }
 
