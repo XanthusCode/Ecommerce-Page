@@ -24,7 +24,7 @@ body{
 html {
     scroll-behavior: smooth;
 }
-  
+
 h1 {
 font-size: 50px;
 line-height: 64px;
@@ -64,30 +64,39 @@ margin: 40px 0;
 body {
 width: 100%;
 }
-  
+
 
 /* =============== NAVBAR ================*/
 header {
+    height: 100px;
+    padding: 0 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 80px;
     background-color: var(--body);
     box-shadow: 0 5px 15px rgba(0,0,0,0.06);
     z-index: 999;
     position: sticky;
     top: 0;
     left: 0;
-
 }
 
-.navbar-menu a {
+header h4 {
+    color: var(--text-color);
+    font-size: 40px;
+    padding: 10px 20px;
+    margin: 0;
+}
+
+
+.navbar-menu a,
+.navbar a {
     color: var(--text);
+    font-weight: 600 ;
     text-decoration: none;
-    font-weight: 600;
     text-transform: uppercase;
     padding: 0 15px;
-    transition: all .5s;
+    transition:  0.3s ease;
 }
 
 .mostrar-menu{
@@ -100,6 +109,7 @@ header {
     cursor: pointer;
     display: none;
     transition: 0.4s;
+
 }
 
 #check{
@@ -110,12 +120,18 @@ header {
 .mostrar-menu i:hover{
     color: cadetblue;
 }
-.navbar-menu a:hover,
-.navbar-menu a.active{
-    transform: scale(1.04);
+.navbar-menu a:hover {
+    transform: scale(1.1);
     color: cadetblue;
-    border-bottom: 2px solid green;
+    transition: 0.2s ease;
+    border-bottom: 1px solid #088178;
 }
+
+.navbar-menu a.active{
+    color: #088178;
+    border-bottom: 1px solid #088178;
+}
+
 
 /* =============== HOME ================*/
 #home{
@@ -131,7 +147,7 @@ header {
     justify-content: center;
 }
 
-#home h4{ 
+#home h4{
     padding-bottom: 15px;
 }
 
@@ -175,7 +191,6 @@ header {
 
 #product1{
     text-align: center;
-    padding-left:200px;
 }
 
 #product1 .product-container{
@@ -203,7 +218,7 @@ header {
 }
 
 #product1 .pro img{
-    margin: 15px;
+    padding-top: 10px;
     width:80%;
     border-radius: 20px;
 }
@@ -297,37 +312,23 @@ footer{
     transform: scale(1.04);
 }
 
-/* Estilos para Catalogo */
-.shop .zap1{
-    width:300px;
-    height: 400px;
-    background-color: var(--fondo);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    text-align: center;
-    align-items: center;
-    border-radius: 5px;
-    object-fit: cover;
-    transition: all .5s; 
-}
 
-.shop img{
-    max-width: 250px;
-    margin-top: 50px;
-    background-color: #5f5b5b;
-    width: 209px;
+/* Estilos para Catalogo */
+#page-header{
+    background-image: url('../img/b1.jpg');
+    width: 100%;
+    height: 40vh;
+    background-size: cover;
     display: flex;
     justify-content: center;
-    align-items: center;
     text-align: center;
+    flex-direction: column;
 }
 
-.shop .zap1:hover{
-    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+#page-header h2{
+    color: white;
 }
+
 
 
 
@@ -345,59 +346,71 @@ footer{
     margin: 30px 10px;
 }
 
-.valores{
-    width: 100%;
-    gap: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.valores {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.valores ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.valores ul li {
+    text-align: center;
+}
+
+.valores ul li a {
+    display: inline-block;
+    margin: 5px;
+    padding: 8px 15px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #333;
 }
 
 
-.valores ul li{
-    list-style: none;
-    display: flex;
-    justify-content: center;
-}
-
-.valores ul li a{
-    padding: 15px;
-}
-
-.somos-f{
-    height: 43vh;
-}
 
 
 /* ============== RESPONSIVE================= */
 @media (max-width: 768px){
+    body{
+        width: 100%;
+    }
+    .section-p1{
+        padding: 20px 40px;
+    }
+
     .mostrar-menu,
     .esconder-menu{
         display: block;
     }
     .navbar-menu{
         position: fixed;
-        width: 80%;
-        height: 80vh;
-        background: #adadad;
+        width: 100%;
+        height: 70vh;
+        background: var(--fondo);
         right: -100%;
-        top: 7%;
+        top: 5%;
         text-align: center;
-        padding: 100px 150px;
+        padding: 100px 50px;
         z-index: 100;
         transition: 0.8s;
     }
+
 
     .navbar-menu a{
         display: block;
         padding: 20px ;
     }
 
-    .navbar-menu a:hover {
+    .navbar-menu a:hover,
+    .navbar a:hover {
         color: cadetblue;
+        border: none;
         margin: 0;
     }
-
     .esconder-menu{
         position: absolute;
         top: 10px;
@@ -406,20 +419,53 @@ footer{
     #check:checked ~ .navbar-menu{
         right: 0;
     }
+    .navbar{
+        margin: 20px;
+        padding: 5px;
+        font-size: 12px;
+    }
 
-    .home,
-    .menu{
+    .navbar a{
+        padding: 5px;
+        margin: 5px;
+    }
+
+    .products{
         display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 20px;
+        align-items: center;
+    }
+    .product-container {
+        width: 50%;
+    }
+
+    .content-somos,
+    .valores{
+        display: flex;
         flex-direction: column;
-        text-align: center;
+        justify-content: center;
+    }
+     h1, h2{
+        font-size: 30px;
     }
 
-    .order-1{
-        order: 1;
+    p{
+        margin: 20px;
     }
 
+    .valores ul  li a{
+        width: 100%;
+        margin: 5px 0;
+        background-color: transparent;
+    }
+
+    .somos-f{
+        height: 100vh;
+    }
     footer{
         grid-template-columns: 100%;
+
     }
 
     .footer-text{
@@ -437,44 +483,34 @@ footer{
 }
 
 @media (max-width: 390px){
+    .mostrar-menu{
+        margin-right: 30px;
+    }
     img{
         max-width: 300px;
     }
-    body{
-        margin: 20px;
-    }
 
-    .content{
-        gap: 50px;
-    }
     header{
         padding: 10px;
+
+    }
+    .product-container {
+        width: 100%; /* Ajusta el tamaño de cada producto en pantallas pequeñas */
     }
 
-    header .logo{
-        padding:  0;
-        font-size: 30px;
-    }
-
-    .content button{
-        background-color: var(--text-color);
-        padding: 5px;
-        font-size: 15px;
-        border: none;
-        color: white;
-        font-weight: bold;
-        transition: 0.2s ease-in-out;
-        margin-top: 25px ;
-    }
-
-    .menu .zap1{
-        width:250px;
-        height: 318px;
-        background-color: var(--fondo);
-        flex-direction: column;
-        display: flex;
-        justify-content: center;
-        text-align: center;
+    .products{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        gap: 20px;
         align-items: center;
+    }
+
+    .footer-text{
+        margin: 15px;
+        text-align: center;
+    }
+
+    .footer-text a{
+        margin: 0;
     }
 }
