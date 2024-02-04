@@ -49,7 +49,7 @@ font-size: 12px;
 
 p {
 font-size: 16px;
-color: #465b52;
+color: #7b9187;
 margin: 15px 0 20px 0;
 }
 
@@ -120,7 +120,8 @@ header h4 {
 .mostrar-menu i:hover{
     color: cadetblue;
 }
-.navbar-menu a:hover {
+.navbar-menu a:hover,
+.navbar a:hover {
     transform: scale(1.1);
     color: cadetblue;
     transition: 0.2s ease;
@@ -167,11 +168,6 @@ header h4 {
     font-size: 15px;
 }
 
-#home p{
-    font-size: 16px;
-    color: var(--text);
-    margin: 15px 0 20px 0;
-}
 
 .text{
     margin-top: 10px;
@@ -329,9 +325,6 @@ footer{
     color: white;
 }
 
-
-
-
 /* Estilos para quienes somos */
 .content-somos{
     margin-top: 50px;
@@ -370,7 +363,86 @@ footer{
     color: #333;
 }
 
+/*  Detalles del producto */
+#prodetails{
+    display: flex;
+    margin-top: 20px;
+}
 
+#prodetails .single-pro-image{
+    width: 40%;
+    margin-right: 50px;
+}
+
+#MainImg {
+    display: block;
+    width: 100%;
+    height: auto;
+    border: 1px solid #ddd;
+    padding: 5px;
+  }
+
+  .smalli-img-group {
+    margin-top: 10px;
+    display: flex;
+  }
+
+  .small-img-col {
+    flex: 1;
+    margin-right: 10px;
+    gap:2px;
+  }
+
+  .small-img-col img {
+    width: 100%;
+    height: 100px;
+    border: 1px solid #ddd;
+    padding: 5px;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+  }
+
+
+.small-img-col img:hover {
+    border: 1px solid #333;
+    opacity: 0.7;
+  }
+
+
+#prodetails .single-pro-details{
+    width: 50%;
+    padding-top: 30px;
+}
+#prodetails .single-pro-details h4{
+    padding: 40px 0 20px 0;
+}
+
+#prodetails .single-pro-details h2{
+    font-size: 26px;
+}
+
+#prodetails .single-pro-details input{
+    width: 50px;
+    height: 47px;
+    padding-left: 10px;
+    margin-right: 10px;
+}
+
+#prodetails .single-pro-details input:focus{
+    outline: none;
+}
+
+#prodetails .single-pro-details button{
+    background: #088178;
+    color: white;
+    padding: 18px ;
+    border: none;
+    border-radius: 5px;
+}
+
+#prodetails .single-pro-details span{
+    line-height: 25px;
+}
 
 
 /* ============== RESPONSIVE================= */
@@ -451,13 +523,32 @@ footer{
     }
 
     p{
-        margin: 20px;
+        margin: 10px;
     }
 
     .valores ul  li a{
         width: 100%;
         margin: 5px 0;
         background-color: transparent;
+    }
+
+    #prodetails{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #prodetails .single-pro-image{
+        width: 100%;
+        margin-right: 0;
+    }
+
+    #prodetails .single-pro-details{
+        width: 100%;
+    }
+
+    .apple h4{
+        font-size: 25px;
+        font-weight: bold;
     }
 
     .somos-f{
@@ -482,7 +573,7 @@ footer{
     }
 }
 
-@media (max-width: 390px){
+@media (max-width: 500px){
     .mostrar-menu{
         margin-right: 30px;
     }
@@ -495,7 +586,7 @@ footer{
 
     }
     .product-container {
-        width: 100%; /* Ajusta el tamaño de cada producto en pantallas pequeñas */
+        width: 100%;
     }
 
     .products{
@@ -512,5 +603,19 @@ footer{
 
     .footer-text a{
         margin: 0;
+    }
+
+    #prodetails{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #prodetails .single-pro-image{
+        width: 100%;
+        margin-right: 0;
+    }
+
+    #prodetails .single-pro-details{
+        width: 100%;
     }
 }
