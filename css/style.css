@@ -592,12 +592,6 @@ footer{
     .section-p1{
         padding: 20px 40px;
     }
-
-    #page-header{
-        max-width: 420px;
-        background-size: cover;
-    }
-
     .mostrar-menu,
     .esconder-menu{
         color: white;
