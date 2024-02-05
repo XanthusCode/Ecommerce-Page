@@ -600,6 +600,7 @@ footer{
 
     .mostrar-menu,
     .esconder-menu{
+        color: white;
         display: block;
     }
     .navbar-menu{
@@ -628,6 +629,7 @@ footer{
         margin: 0;
     }
     .esconder-menu{
+        color: white;
         position: absolute;
         top: 10px;
         right: 50px;
@@ -747,7 +749,28 @@ footer{
 
 @media (max-width: 500px){
     .mostrar-menu{
+        color: white;
         margin-right: 30px;
+    }
+
+    .navbar {
+        max-height: 180px;
+        padding: 5px;
+        overflow-y: auto;
+        margin: 20px;
+        font-size: 12px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .navbar a {
+        margin-top: 5px;
+        margin-bottom: 2px;
+    }
+
+    .navbar a:last-child {
+        margin-bottom: 0;
     }
 
     header{
